@@ -24,7 +24,7 @@ Hence, a class of additive feature attribution methods was defined. A guarantee 
 A different approach focusing on optimizing sample selection identification is MMD-critic (Kim, Khanna and Koyejo, 2016). This method suggests a framework for "prototype" and "criticism" selection to improve the interpretability of complex data distributions. Here, the prototypes are a subset of samples which are the most representative to the dataset and the criticism are samples that are not well-explained by the prototypes.
 This method uses the outlines of MMD (Lloyd and Ghahramani, 2015), and its associated witness function, to find those samples.
 
-# Methods:
+## Methods:
 Since the model is designed to operate in medical settings and expected to impact on patient care, it is crucial to examine its outputs, including predictions' confidence level. Hence, the following procedure is performed for each confidence interval separately:
 [0−0.3),[0.3−0.5),[0.5,0.8),[0.8,1].
 
