@@ -22,19 +22,15 @@ We refer to two different stages: sample-picking and local-explanations.
 
 For the sample-picking stage, the methods selected are: 
 
-**i.** SP-Lime - aims to select a representative samples by maximize a 'coverage' function over the dataset.
-
-**ii.** MMD - critic - selects both 'critics' and 'prototypes' which allows an inquiry to model's behavior on samples which are most and least representative to the dataset.
-
-**iii.** Type I & II Errors picks – dividing the samples into groups according to the predictions error types, type-I and type-II, together with samples for which the prediction was correct. Then randomly sampling from each group.
+-  **SP-Lime** - aims to select a representative samples by maximize a 'coverage' function over the dataset.
+- **MMD - critic** - selects both 'critics' and 'prototypes' which allows an inquiry to model's behavior on samples which are most and least representative to the dataset.
+-  **Type I & II Errors picks** – dividing the samples into groups according to the predictions error types, type-I and type-II, together with samples for which the prediction was correct. Then randomly sampling from each group.
 
 After dividing the dataset to 4 intervals according to the confidence level assigned by the model 4 examples are sampled by each sample-pick method according as following: best 4 examples with SP-Lime, 2 prototypes and 2 critics examples with MMD-critic. With Type I & II Errors picks, the picks won't be performed per interval but per group. From each group 5 examples are randomly sampled.
 
 For the local-explanations stage, the methods that will be examined are:
-
-**i.** Lime – which provides local explanations in comparison to perturbed data points in the proximity of the explained example.
-
-**ii.** SHAP – a unification of six different interpretability methods, among them is LIME. In the available implementation SHAP can only learn feature importance over up to 200 examples from the training set. In this work the 200 examples were chosen by MMD critic as prototypes.
+- **Lime** – which provides local explanations in comparison to perturbed data points in the proximity of the explained example.
+- **SHAP** – a unification of six different interpretability methods, among them is LIME. In the available implementation SHAP can only learn feature importance over up to 200 examples from the training set. In this work the 200 examples were chosen by MMD critic as prototypes.
 
 In order to find the best in cooperation of sample-picking and local-explanations method all the combinations are examined except incorporation of SP-Lime with SHAP.
 
