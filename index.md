@@ -1,3 +1,6 @@
+<img src="img/int.png" width=150 height=125 align="right">
+
+
 ## AI Interpretability in Healthcare Scenarios
 
 The use of AI in general and Machine Learning algorithms in particular has become ubiquitous. Of course, the use of such algorithms in the medical domain is emerging as well. Applications of machine learning techniques in medicine may include tasks like prediction of an illness and treatment suggestion for the doctors. But unlike many domains, in medicine, predictions cannot be acted upon on merely blind faith, as the consequences may be catastrophic.
